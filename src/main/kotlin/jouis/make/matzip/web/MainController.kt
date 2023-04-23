@@ -9,14 +9,17 @@ import org.springframework.web.bind.annotation.RestController
 @Controller
 class MainController {
     @GetMapping("/")
-    fun index(model: Model): String {
-        println("hello")
-        model["title"] = "hello"
+    fun index(): String {
         return "hello"
     }
 
-    @GetMapping("/main/map")
+    @GetMapping("/kakao/map")
     fun map(): String {
         return "kakaoMap"
+    }
+
+    @GetMapping("/kakao/search")
+    fun search(): String {
+        return "kakaoSearchMap"
     }
 }
